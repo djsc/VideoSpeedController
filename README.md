@@ -1,5 +1,5 @@
 # VideoSpeedController
-A Firefox browser extension that provides a toolbar menu for HTML 5 video speed manipulation. It is capable of setting speeds that are typically unavailable from the video menu and takes less clicks than usual.
+A Firefox browser extension that provides a toolbar menu for HTML 5 video speed manipulation. It is capable of setting speeds that are typically unavailable from the video menu and it also requires fewer clicks to change the speed.
 
 ## Installation
 
