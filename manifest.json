@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Video Speed Controller",
+    "version": "1.0",
+    "description": "Change the speed of HTML 5 videos via the extension's toolbar button.",
+    "icons": {
+        "48": "icons/icon48.png",
+        "96": "icons/icon96.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_icon": "icons/icon32.png",
+        "default_title": "Video Speed Controller",
+        "default_popup": "popup/popup.html"
+    }
+}
