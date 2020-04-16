@@ -3,7 +3,11 @@ A Firefox browser extension that provides a toolbar menu and keyboard shortcuts 
 
 ## Installation
 
-To install, either temporarily load the plugin in Firefox via about:debugging#/runtime/this-firefox, or create your own self distributed xpi file via Firefox's Add-on Developer Hub.
+To install the plugin in Firefox, do one of the following:
+
+1. Download the code and temporarily load the plugin in Firefox via about:debugging#/runtime/this-firefox. This will work for the current session only.
+2. Open the xpi file distribured in the 'Releases' section 
+3. Create and open your own self distributed xpi file via Firefox's Add-on Developer Hub.
 
 ## Usage
 Once installed, a new icon will appear in Firefox's toolbar. Clicking this icon will open a popup that allows you to increment/decrement/set speed for all HTML 5 videos on the current tab. You can also use keyboard shortcuts to increment and decrement the speed.
