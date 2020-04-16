@@ -1,35 +1,34 @@
 // listen for clicks on the popup. if a speed button was pressed, send a
 // changeSpeed message to the content script
-const listenForClicks = () => {
-    document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('speedbutton')) {
+document.addEventListener('click', (e) => {
+    // try to get the current tab
+    browser.tabs.query({ active: true, currentWindow: true })
+    .then(tabs => {
+        if (tabs.length === 0) {
+            throw new Error('no tabs found');
+        }
+        const currentTabId = tabs[0].id;
+        if (e.target.classList.contains('set')) {
             // check the data-speed attribute in popup.html to get the desired speed
             const speed = e.target.getAttribute('data-speed');
-            // try to get the current tab
-            browser.tabs.query({ active: true, currentWindow: true })
-                .then(tabs => {
-                    // send a changeSpeed message to the current tab
-                    browser.tabs.sendMessage(tabs[0].id, {
-                        command: 'changeSpeed',
-                        speed
-                    });
-                })
-                .catch(err => {
-                    console.error('could not query tabs', err)
-                });
+            // send a changeSpeed message to the current tab
+            browser.tabs.sendMessage(currentTabId, {
+                command: 'changeSpeed',
+                speed
+            });
             // close the popup
             window.close()
+        } else if (e.target.classList.contains('increase')) {
+            browser.tabs.sendMessage(currentTabId, {
+                command: 'increaseSpeed'
+            });
+        } else if (e.target.classList.contains('decrease')) {
+            browser.tabs.sendMessage(currentTabId, {
+                command: 'decreaseSpeed'
+            });
         }
+    })
+    .catch(err => {
+        console.error('could not query tabs', err)
     });
-}
-
-// show error text instead of the speed buttons if the script fails to load
-const handleScriptFailure = () => {
-    document.querySelector('#popup-content').classList.add('hidden');
-    document.querySelector('#error-content').classList.remove('hidden');
-}
-
-// execute the content script and then listen for clicks
-browser.tabs.executeScript({ file: '/contentScripts/speedChanger.js' })
-    .then(listenForClicks)
-    .catch(handleScriptFailure);
+});

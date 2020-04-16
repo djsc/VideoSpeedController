@@ -15,14 +15,6 @@ body {
     font-weight: bold;
 }
 
-.error {
-    margin: 0px;
-    padding: 5px 0px;
-    text-align: center;
-    font-size: 1em;
-    width: 100%;
-}
-
 .speedbutton {
     margin: 0px;
     padding: 5px;
@@ -37,10 +29,6 @@ body {
 
 .speedbutton:hover {
     background-color: lightgray;
-}
-
-.hidden {
-    display: none;
 }
 
 .noselect {
