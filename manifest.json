@@ -48,7 +48,7 @@
         },
         "play-toggle": {
             "suggested_key": {
-                "default": "Alt+Shift+S"
+                "default": "Alt+Shift+Q"
             },
             "description": "Play/Pause toggle"
         },
