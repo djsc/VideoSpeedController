@@ -1,5 +1,5 @@
 // listen for clicks on the popup. if a speed button was pressed, send a
-// changeSpeed message to the content script
+// setSpeed message to the content script
 document.addEventListener('click', (e) => {
     // try to get the current tab
     browser.tabs.query({ active: true, currentWindow: true })
@@ -11,9 +11,9 @@ document.addEventListener('click', (e) => {
         if (e.target.classList.contains('set')) {
             // check the data-speed attribute in popup.html to get the desired speed
             const speed = e.target.getAttribute('data-speed');
-            // send a changeSpeed message to the current tab
+            // send a setSpeed message to the current tab
             browser.tabs.sendMessage(currentTabId, {
-                command: 'changeSpeed',
+                command: 'setSpeed',
                 speed
             });
             // close the popup

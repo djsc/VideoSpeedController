@@ -13,12 +13,23 @@ browser.commands.onCommand.addListener((command) => {
                 });
             } else if (command === "video-speed-default") {
                 browser.tabs.sendMessage(currentTabId, {
-                    command: 'changeSpeed',
-                    speed: 1.0
+                    command: 'defaultSpeed'
                 });
             } else if (command === "video-speed-up") {
                 browser.tabs.sendMessage(currentTabId, {
                     command: 'increaseSpeed'
+                });
+            } else if (command === "skip-back") {
+                browser.tabs.sendMessage(currentTabId, {
+                    command: 'scrubBack'
+                });
+            } else if (command === "play-toggle") {
+                browser.tabs.sendMessage(currentTabId, {
+                    command: 'playToggle'
+                });
+            } else if (command === "skip-forward") {
+                browser.tabs.sendMessage(currentTabId, {
+                    command: 'scrubForward'
                 });
             }
         })

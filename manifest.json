@@ -39,6 +39,24 @@
                 "default": "Ctrl+Alt+C"
             },
             "description": "Increase video speed by 0.25"
+        },
+        "skip-back": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+A"
+            },
+            "description": "Go back 5 seconds"
+        },
+        "play-toggle": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+S"
+            },
+            "description": "Play/Pause toggle"
+        },
+        "skip-forward": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+D"
+            },
+            "description": "Go forward 5 seconds"
         }
     }
 }
