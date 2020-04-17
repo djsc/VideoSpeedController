@@ -16,9 +16,9 @@ Once installed, a new icon will appear in Firefox's toolbar. Clicking this icon 
 
 ## Keyboard shortcuts
 
-* Decrement speed by 0.25: Ctrl+Alt+Z
-* Return to normal speed: Ctrl+Alt+X
-* Increment speed by 0.25: Ctrl+Alt+C
-* Go back 5 seconds: Ctrl+Alt+A
-* Pause/Play toggle: Ctrl+Alt+S
-* Go forward 5 seconds: Ctrl+Alt+D
+* Decrement speed by 0.25: Alt+Shift+Z
+* Return to normal speed: Alt+Shift+X
+* Increment speed by 0.25: Alt+Shift+C
+* Go back 5 seconds: Alt+Shift+A
+* Pause/Play toggle: Alt+Shift+Q
+* Go forward 5 seconds: Alt+Shift+D
